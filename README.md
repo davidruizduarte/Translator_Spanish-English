@@ -1,1 +1,1 @@
-![](https://github.com/davidruizduarte/snakegame/blob/main/snake%20game.jpg) 
+![](https://github.com/davidruizduarte/Translator_Spanish-English/blob/main/Traductor.png) 
