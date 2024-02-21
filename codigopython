@@ -1,0 +1,24 @@
+#Code  by David Ruiz a.k.a @viajatech
+#Código para traducir de español a inglés usando Googletrans y Gradio por David Ruiz a.k.a @viajatech
+
+#pip install googletrans==3.1.0a0
+#pip install googletrans
+#pip install googletrans --upgrade
+#pip install gradio
+
+
+
+import gradio as gr
+from googletrans import Translator
+
+def traducir_a_ingles(texto):
+    traductor = Translator()
+    traduccion = traductor.translate(texto, dest="en")
+    return traduccion.text
+
+with gr.Blocks() as interfaz:  # Usar gr.Blocks para un diseño más flexible
+    campo_espanol = gr.Textbox(label="Texto en español")
+    campo_ingles = gr.Textbox(label="Traducción al inglés")
+    gr.Interface(fn=traducir_a_ingles, inputs=campo_espanol, outputs=campo_ingles, title="Traductor Español-Inglés")
+
+interfaz.launch()
